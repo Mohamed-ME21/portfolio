@@ -609,59 +609,6 @@
     margin-top: 2px;
     font-size: 0.7rem;
   }
-  /* ── AI PLAYGROUND ── */
-  #ai-playground { padding-top: 4rem; padding-bottom: 2rem; }
-  .playground-container {
-    background: linear-gradient(145deg, rgba(13,17,23,0.8), rgba(20,27,37,0.8));
-    border: 1px solid var(--border); border-radius: var(--r2); padding: 2.5rem;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(255,255,255,0.05);
-    position: relative; overflow: hidden; backdrop-filter: blur(12px);
-  }
-  .playground-container::before {
-    content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
-    background: radial-gradient(circle at center, rgba(0,200,255,0.05) 0%, transparent 50%);
-    animation: rotate 20s linear infinite; pointer-events: none;
-  }
-  @keyframes rotate { 100% { transform: rotate(360deg); } }
-  .pg-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; position: relative; z-index: 2; }
-  .pg-icon { font-size: 2.5rem; filter: drop-shadow(0 0 10px rgba(0,200,255,0.5)); }
-  .pg-title { font-family: var(--font-head); font-size: 1.5rem; color: var(--text); margin-bottom: 0.2rem; }
-  .pg-subtitle { font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent); }
-  .pg-body { display: flex; gap: 1rem; margin-bottom: 2rem; position: relative; z-index: 2; }
-  .pg-input {
-    flex: 1; background: rgba(0,0,0,0.5); border: 1px solid var(--border);
-    border-radius: 8px; padding: 1rem 1.5rem; color: var(--text); font-size: 1rem;
-    font-family: var(--font-mono); transition: all 0.3s;
-  }
-  .pg-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 15px rgba(0,200,255,0.2); }
-  .pg-status {
-    background: rgba(0,0,0,0.3); border-radius: 8px; padding: 1.5rem;
-    font-family: var(--font-mono); font-size: 0.85rem; color: var(--text3);
-    margin-bottom: 2rem; display: none; flex-direction: column; gap: 0.8rem;
-    position: relative; z-index: 2;
-  }
-  .pg-step { display: flex; align-items: center; gap: 10px; opacity: 0; transform: translateX(-10px); transition: all 0.3s; }
-  .pg-step.active { opacity: 1; transform: translateX(0); color: var(--text2); }
-  .pg-step.done { color: var(--accent); }
-  .pg-step span { color: var(--accent); font-weight: bold; }
-  .pg-result {
-    display: none; align-items: center; gap: 2rem; background: rgba(0,200,255,0.05);
-    border: 1px solid rgba(0,200,255,0.2); border-radius: 12px; padding: 2rem;
-    position: relative; z-index: 2; animation: fadeSlideUp 0.5s ease both;
-  }
-  .pg-result.active { display: flex; }
-  .pg-score { position: relative; width: 80px; height: 80px; }
-  .circular-chart { display: block; margin: 0 auto; max-width: 100%; max-height: 250px; }
-  .circle-bg { fill: none; stroke: rgba(255,255,255,0.1); stroke-width: 2.5; }
-  .circle { fill: none; stroke-width: 2.5; stroke-linecap: round; transition: stroke-dasharray 1.5s cubic-bezier(0.4, 0, 0.2, 1); }
-  #pgCircle { stroke: #00FF88; }
-  .pg-score-text {
-    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
-    font-family: var(--font-head); font-size: 1.2rem; font-weight: 800; color: var(--text);
-  }
-  .pg-verdict { font-family: var(--font-head); font-size: 1.8rem; font-weight: 700; color: var(--text); }
-  .pg-verdict.positive { color: #00FF88; text-shadow: 0 0 20px rgba(0,255,136,0.4); }
-  .pg-verdict.negative { color: #FF4444; text-shadow: 0 0 20px rgba(255,68,68,0.4); }
 
   /* ── ELITE METRICS & FEATURED LAYOUT ── */
   .project-card.featured-elite {
@@ -1214,7 +1161,7 @@
       </div>
       <div class="hero-buttons">
         <a href="#projects" class="btn-primary glow-btn">View Case Studies ↓</a>
-        <a href="https://github.com" target="_blank" class="btn-secondary gh-btn">
+        <a href="https://github.com/Mohamed-ME21" target="_blank" class="btn-secondary gh-btn">
           <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
           GitHub Activity
         </a>
@@ -1231,8 +1178,9 @@
       </div>
       <div class="hero-socials">
         <a href="mailto:mohamedshehata210006@gmail.com" class="social-btn" title="Email">📧</a>
-        <a href="https://linkedin.com" class="social-btn" title="LinkedIn" target="_blank">💼</a>
-        <a href="https://github.com" class="social-btn" title="GitHub" target="_blank">🐙</a>
+        <a href="https://www.linkedin.com/in/6mohamed-shehata/" class="social-btn" title="LinkedIn" target="_blank">💼</a>
+        <a href="https://github.com/Mohamed-ME21" class="social-btn" title="GitHub" target="_blank">🐙</a>
+        <a href="https://www.kaggle.com/mohamedeidshehata6" class="social-btn" title="Kaggle" target="_blank">📊</a>
         <a href="tel:+201116455176" class="social-btn" title="Phone">📱</a>
       </div>
     </div>
@@ -1435,40 +1383,6 @@
   </div>
 </section>
 
-<!-- AI PLAYGROUND -->
-<section id="ai-playground">
-  <div class="section-inner">
-    <div class="playground-container reveal">
-      <div class="pg-header">
-        <div class="pg-icon">🧠</div>
-        <div>
-          <h3 class="pg-title">Interactive NLP Demo</h3>
-          <p class="pg-subtitle">Live Sentiment Predictor Simulation</p>
-        </div>
-      </div>
-      <div class="pg-body">
-        <input type="text" id="pgInput" class="pg-input" placeholder="Type a review (e.g. 'This product is absolutely amazing!')" value="This portfolio is absolutely amazing!">
-        <button class="btn-primary glow-btn" id="pgBtn" style="padding:0.8rem 1.5rem; white-space:nowrap;">Run Model</button>
-      </div>
-      <div class="pg-status" id="pgStatus">
-        <div class="pg-step"><span>[1]</span> Tokenizing input text...</div>
-        <div class="pg-step"><span>[2]</span> Passing through Embedding Layer...</div>
-        <div class="pg-step"><span>[3]</span> BiLSTM sequence processing...</div>
-        <div class="pg-step"><span>[4]</span> Dense layer classification...</div>
-      </div>
-      <div class="pg-result" id="pgResult">
-        <div class="pg-score">
-          <svg class="circular-chart" viewBox="0 0 36 36">
-            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-            <path class="circle" id="pgCircle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-          </svg>
-          <div class="pg-score-text" id="pgScoreVal">0%</div>
-        </div>
-        <div class="pg-verdict" id="pgVerdict">Awaiting input...</div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- PROJECTS -->
 <section id="projects">
@@ -1967,7 +1881,7 @@
         <div class="edu-degree">Bachelor of Science — Navigation Science & Space Technology</div>
         <div class="edu-school">Beni Suef University</div>
         <div class="edu-date">2021 – 2026 · Egypt</div>
-        <p style="font-size:0.85rem; color:var(--text2); font-weight:300; margin-top:0.8rem; line-height:1.7;">Rigorous STEM curriculum providing a strong foundation in applied mathematics, physics, and systems thinking — skills that directly inform data modeling, statistical analysis, and engineering-grade ML development.</p>
+        <p style="font-size:0.85rem; color:var(--text2); font-weight:300; margin-top:0.8rem; line-height:1.7;">-A multidisciplinary aerospace and navigation science background combining advanced mathematics, physics, systems engineering, and analytical modeling — enabling the development of intelligent AI systems and engineering-driven data solutions.</p>
       </div>
     </div>
   </div>
@@ -1999,18 +1913,25 @@
               <div class="contact-value">+20 111 645 5176</div>
             </div>
           </a>
-          <a href="https://linkedin.com" class="contact-item" target="_blank">
+          <a href="https://www.linkedin.com/in/6mohamed-shehata/" class="contact-item" target="_blank">
             <div class="contact-icon">💼</div>
             <div>
               <div class="contact-label">LINKEDIN</div>
-              <div class="contact-value">linkedin.com/in/mohamedshehata</div>
+              <div class="contact-value">linkedin.com/in/6mohamed-shehata</div>
             </div>
           </a>
-          <a href="https://github.com" class="contact-item" target="_blank">
+          <a href="https://github.com/Mohamed-ME21" class="contact-item" target="_blank">
             <div class="contact-icon">🐙</div>
             <div>
               <div class="contact-label">GITHUB</div>
-              <div class="contact-value">github.com/mohamedshehata</div>
+              <div class="contact-value">github.com/Mohamed-ME21</div>
+            </div>
+          </a>
+          <a href="https://www.kaggle.com/mohamedeidshehata6" class="contact-item" target="_blank">
+            <div class="contact-icon">📊</div>
+            <div>
+              <div class="contact-label">KAGGLE</div>
+              <div class="contact-value">kaggle.com/mohamedeidshehata6</div>
             </div>
           </a>
           <div class="contact-item" style="cursor:default">
@@ -2088,8 +2009,9 @@
     <div class="footer-bottom">
       <div class="footer-socials">
         <a href="mailto:mohamedshehata210006@gmail.com" class="footer-social-btn" title="Email">📧</a>
-        <a href="https://linkedin.com" class="footer-social-btn" title="LinkedIn" target="_blank">💼</a>
-        <a href="https://github.com" class="footer-social-btn" title="GitHub" target="_blank">🐙</a>
+        <a href="https://www.linkedin.com/in/6mohamed-shehata/" class="footer-social-btn" title="LinkedIn" target="_blank">💼</a>
+        <a href="https://github.com/Mohamed-ME21" class="footer-social-btn" title="GitHub" target="_blank">🐙</a>
+        <a href="https://www.kaggle.com/mohamedeidshehata6" class="footer-social-btn" title="Kaggle" target="_blank">📊</a>
         <a href="tel:+201116455176" class="footer-social-btn" title="Phone">📱</a>
       </div>
       <div class="footer-copy">
@@ -2420,80 +2342,6 @@
     }
   });
 
-  // AI PLAYGROUND SIMULATION LOGIC
-  const pgBtn = document.getElementById('pgBtn');
-  const pgInput = document.getElementById('pgInput');
-  const pgStatus = document.getElementById('pgStatus');
-  const pgSteps = document.querySelectorAll('.pg-step');
-  const pgResult = document.getElementById('pgResult');
-  const pgCircle = document.getElementById('pgCircle');
-  const pgScoreVal = document.getElementById('pgScoreVal');
-  const pgVerdict = document.getElementById('pgVerdict');
-
-  pgBtn.addEventListener('click', () => {
-    const text = pgInput.value.trim();
-    if (!text) return;
-    
-    // Reset
-    pgBtn.disabled = true;
-    pgResult.classList.remove('active');
-    pgStatus.style.display = 'flex';
-    pgCircle.style.strokeDasharray = '0, 100';
-    pgScoreVal.textContent = '0%';
-    pgSteps.forEach(step => {
-      step.classList.remove('active', 'done');
-    });
-
-    let currentStep = 0;
-    const simulateStep = () => {
-      if (currentStep < pgSteps.length) {
-        if (currentStep > 0) pgSteps[currentStep - 1].classList.add('done');
-        pgSteps[currentStep].classList.add('active');
-        currentStep++;
-        setTimeout(simulateStep, 600 + Math.random() * 400); // Random delay 600-1000ms
-      } else {
-        pgSteps[currentStep - 1].classList.add('done');
-        setTimeout(showResult, 500);
-      }
-    };
-    
-    const showResult = () => {
-      pgStatus.style.display = 'none';
-      pgResult.classList.add('active');
-      
-      // Calculate fake sentiment based on simple keywords (just for demo illusion)
-      const lower = text.toLowerCase();
-      const isPositive = !lower.includes('bad') && !lower.includes('terrible') && !lower.includes('worst') && !lower.includes('awful');
-      
-      let score = isPositive ? (85 + Math.random() * 14) : (10 + Math.random() * 25);
-      score = score.toFixed(1);
-      
-      // Animate Gauge
-      setTimeout(() => {
-        pgCircle.style.stroke = isPositive ? '#00FF88' : '#FF4444';
-        pgCircle.style.strokeDasharray = `${score}, 100`;
-        
-        // Counter animation
-        let count = 0;
-        const interval = setInterval(() => {
-          count += 2;
-          if(count >= score) {
-            count = score;
-            clearInterval(interval);
-          }
-          pgScoreVal.textContent = Math.floor(count) + '%';
-        }, 20);
-
-        pgVerdict.textContent = isPositive ? 'Positive Sentiment' : 'Negative Sentiment';
-        pgVerdict.className = `pg-verdict ${isPositive ? 'positive' : 'negative'}`;
-        
-        pgBtn.disabled = false;
-        pgBtn.textContent = "Run Again";
-      }, 100);
-    };
-
-    simulateStep();
-  });
 
   // 3D TILT EFFECT FOR PROJECT CARDS
   const cards = document.querySelectorAll('.project-card');
