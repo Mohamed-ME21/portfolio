@@ -149,9 +149,7 @@ nav.scrolled { height: 58px; background: rgba(11,14,20,0.96); }
   /* Subtle static grain texture — no animation */
   background: var(--bg);
 }
-/* Removed: hero-grid-bg, hero-glow, hero-glow2, neuralCanvas, floating-tech — hidden via display:none in HTML */
-.hero-grid-bg, .hero-glow, .hero-glow2, .floating-tech { display: none !important; }
-#neuralCanvas { display: none !important; }
+/* hero-grid-bg, hero-glow, hero-glow2, neuralCanvas, floating-tech — removed from DOM */
 
 /* Thin static geometric line — purposeful, not decorative noise */
 #hero::before {
@@ -323,7 +321,7 @@ nav.scrolled { height: 58px; background: rgba(11,14,20,0.96); }
   background: rgba(59,130,246,0.4);
   z-index: 0;
 }
-.hero-photo-border::before { display: none; }
+
 .hero-photo {
   position: absolute;
   inset: 2px;
@@ -459,7 +457,7 @@ section { padding: 100px 5vw; }
   transition: border-color var(--t-med), transform var(--t-med);
 }
 .highlight-card:hover { border-color: rgba(59,130,246,0.25); transform: translateY(-2px); }
-.highlight-icon { display: none; }
+
 .highlight-num {
   font-family: var(--font-head);
   font-size: 1.55rem;
@@ -493,7 +491,7 @@ section { padding: 100px 5vw; }
   position: relative;
   overflow: hidden;
 }
-.skill-category::before { display: none; }
+
 .skill-category:hover { transform: translateY(-3px); border-color: rgba(59,130,246,0.2); }
 .skill-cat-header { display: flex; align-items: center; gap: 10px; margin-bottom: 1.3rem; }
 .skill-cat-icon {
@@ -599,12 +597,7 @@ section { padding: 100px 5vw; }
   align-items: center;
   gap: 7px;
 }
-.pulse-dot {
-  width: 6px; height: 6px;
-  background: #22C55E;
-  border-radius: 50%;
-  /* No animation */
-}
+
 .featured-elite .project-img-wrap { height: 100%; aspect-ratio: auto; border-bottom: none; border-right: 1px solid var(--border); }
 .featured-elite .project-content { padding: 2.2rem; justify-content: center; }
 .project-img-wrap { width: 100%; aspect-ratio: 16/9; position: relative; overflow: hidden; background: var(--bg3); border-bottom: 1px solid var(--border); }
@@ -657,7 +650,7 @@ section { padding: 100px 5vw; }
   padding: 0.18rem 0.55rem;
   border-radius: 4px;
 }
-.project-stack .icon { display: none; }
+
 /* Elite metrics — replace SVG circles with clean numeric callouts */
 .elite-metrics {
   display: flex;
@@ -669,8 +662,7 @@ section { padding: 100px 5vw; }
   border: 1px solid var(--border);
 }
 .elite-metric { display: flex; flex-direction: column; gap: 2px; }
-/* Hide SVG rings entirely */
-.circular-chart { display: none; }
+/* circular-chart SVGs removed from DOM */
 .em-data { display: flex; flex-direction: column; }
 .em-val { font-family: var(--font-head); font-size: 1.35rem; font-weight: 800; color: var(--accent); line-height: 1.1; }
 .em-label { font-family: var(--font-mono); font-size: 0.68rem; color: var(--text3); margin-top: 1px; }
@@ -830,7 +822,7 @@ section { padding: 100px 5vw; }
 <style>
 /* ── CONTACT ── */
 #contact { position: relative; overflow: hidden; padding: 100px 5vw; background: var(--bg2); }
-.contact-glow { display: none; }
+
 .contact-layout { display: grid; grid-template-columns: 1fr; gap: 3rem; max-width: 640px; margin: 0 auto; }
 
 .contact-headline { font-family: var(--font-head); font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: var(--text); line-height: 1.1; margin-bottom: 1rem; letter-spacing: -1px; }
@@ -849,7 +841,7 @@ section { padding: 100px 5vw; }
   text-decoration: none;
   transition: border-color var(--t-med), transform var(--t-med);
 }
-.c-link-item::before { display: none; }
+
 .c-link-item:hover { border-color: var(--border2); transform: translateX(5px); }
 
 .c-link-icon {
@@ -1038,15 +1030,7 @@ section { padding: 100px 5vw; }
 
 <!-- HERO -->
 <section id="hero">
-  <canvas id="neuralCanvas"></canvas>
-  <div class="hero-grid-bg"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-glow2"></div>
-  <div class="floating-tech t1">Python</div>
-  <div class="floating-tech t2">TensorFlow</div>
-  <div class="floating-tech t3">SQL</div>
-  <div class="floating-tech t4">NLP</div>
-  <div class="floating-tech t5">PyTorch</div>
+
 
   <div class="hero-content">
     <div class="hero-text">
@@ -1345,7 +1329,7 @@ section { padding: 100px 5vw; }
     <div class="projects-grid">
       <!-- FEATURED GRADUATION PROJECT: Solid Rocket Motor Grain Design -->
       <div class="project-card featured-elite reveal" onclick="openProjectModal('rocket-surrogate')">
-        <div class="featured-badge"><span class="pulse-dot"></span> Graduation Project 2026</div>
+        <div class="featured-badge"><svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Graduation Project 2026</div>
         <div class="project-img-wrap">
           <img src="projects/rocket-motor-grain-design.jpg" alt="Deep Learning Surrogate Models for Solid Rocket Motor Grain Design" loading="lazy">
           <div class="project-img-overlay"><span class="view-case-btn">View Deep Dive</span></div>
@@ -1356,11 +1340,9 @@ section { padding: 100px 5vw; }
           <div class="project-desc">Led the engineering of 18 neural pipelines replacing high-cost CFD simulations with millisecond neural inference for rocket motor grain design, achieving 98.6% R² and sub-2% MAPE.</div>
           <div class="elite-metrics">
             <div class="elite-metric">
-              <svg class="circular-chart small" viewBox="0 0 36 36"><path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/><path class="circle accuracy-circle" stroke-dasharray="98.6, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/></svg>
               <div class="em-data"><div class="em-val">98.6%</div><div class="em-label">R² Score</div></div>
             </div>
             <div class="elite-metric">
-              <svg class="circular-chart small" viewBox="0 0 36 36"><path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/><path class="circle auc-circle" stroke-dasharray="98.0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/></svg>
               <div class="em-data"><div class="em-val">&lt;2%</div><div class="em-label">MAPE</div></div>
             </div>
           </div>
@@ -1375,7 +1357,7 @@ section { padding: 100px 5vw; }
 
       <!-- FEATURED: Sentiment Analysis -->
       <div class="project-card reveal" onclick="openProjectModal('sentiment')">
-        <div class="featured-badge"><span class="pulse-dot"></span> Featured AI Project</div>
+        <div class="featured-badge"><svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Featured AI Project</div>
         <div class="project-img-wrap">
           <img src="projects/amazon-reviews-sentiment-analysis.webp" alt="Amazon Reviews Sentiment Analysis" loading="lazy">
           <div class="project-img-overlay"><span class="view-case-btn">View Deep Dive</span></div>
@@ -1386,11 +1368,9 @@ section { padding: 100px 5vw; }
           <div class="project-desc">Engineered an advanced NLP pipeline and hybrid Deep Learning architecture (CNN + BiLSTM) to extract actionable consumer sentiment from messy e-commerce reviews.</div>
           <div class="elite-metrics">
             <div class="elite-metric">
-              <svg class="circular-chart small" viewBox="0 0 36 36"><path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/><path class="circle accuracy-circle" stroke-dasharray="94.58, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/></svg>
               <div class="em-data"><div class="em-val">94.58%</div><div class="em-label">Accuracy</div></div>
             </div>
             <div class="elite-metric">
-              <svg class="circular-chart small" viewBox="0 0 36 36"><path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/><path class="circle auc-circle" stroke-dasharray="98.6, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/></svg>
               <div class="em-data"><div class="em-val">0.9860</div><div class="em-label">ROC-AUC</div></div>
             </div>
           </div>
@@ -1711,7 +1691,7 @@ section { padding: 100px 5vw; }
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="contact-glow"></div>
+
   <div class="section-inner" style="position: relative; z-index: 2;">
     <div class="contact-layout">
       
@@ -1788,7 +1768,7 @@ section { padding: 100px 5vw; }
   <div class="section-inner">
     <div class="focus-container reveal">
       <div class="focus-header">
-        <div class="pulse-dot"></div>
+        <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" style="color:var(--accent);flex-shrink:0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
         <h3 class="focus-ftitle">Current Focus & Research</h3>
       </div>
       <div class="focus-tags">
@@ -1915,58 +1895,7 @@ function type() {
 }
 setTimeout(type, 1500);
 
-// ═══════════════════════════════════════
-// NEURAL CANVAS
-// ═══════════════════════════════════════
-const canvas = document.getElementById('neuralCanvas');
-const ctx = canvas.getContext('2d');
-let width, height, particles;
 
-function initCanvas() {
-  width = canvas.width = window.innerWidth;
-  height = canvas.height = document.getElementById('hero').offsetHeight;
-  particles = [];
-  const count = window.innerWidth < 768 ? 35 : 70;
-  for (let i = 0; i < count; i++) {
-    particles.push({
-      x: Math.random() * width, y: Math.random() * height,
-      vx: (Math.random() - 0.5) * 0.4, vy: (Math.random() - 0.5) * 0.4,
-      radius: Math.random() * 1.5 + 0.5
-    });
-  }
-}
-
-let mouse = { x: -1000, y: -1000 };
-document.getElementById('hero').addEventListener('mousemove', e => {
-  mouse.x = e.clientX; mouse.y = e.clientY + window.scrollY;
-});
-document.getElementById('hero').addEventListener('mouseleave', () => { mouse.x = -1000; mouse.y = -1000; });
-
-function drawParticles() {
-  ctx.clearRect(0, 0, width, height);
-  ctx.fillStyle = 'rgba(0, 200, 255, 0.5)';
-  ctx.strokeStyle = 'rgba(0, 200, 255, 0.12)';
-  particles.forEach((p, i) => {
-    p.x += p.vx; p.y += p.vy;
-    if (p.x < 0 || p.x > width) p.vx *= -1;
-    if (p.y < 0 || p.y > height) p.vy *= -1;
-    ctx.beginPath(); ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2); ctx.fill();
-    for (let j = i + 1; j < particles.length; j++) {
-      const p2 = particles[j];
-      const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
-      if (dist < 100) { ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(p2.x, p2.y); ctx.stroke(); }
-    }
-    const md = Math.hypot(p.x - mouse.x, p.y - mouse.y);
-    if (md < 150) {
-      ctx.strokeStyle = `rgba(0,200,255,${0.4*(1-md/150)})`;
-      ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
-      ctx.strokeStyle = 'rgba(0,200,255,0.12)';
-    }
-  });
-  requestAnimationFrame(drawParticles);
-}
-initCanvas(); drawParticles();
-window.addEventListener('resize', initCanvas);
 
 
 // ═══════════════════════════════════════
@@ -2023,10 +1952,10 @@ const projectData = {
     approach: "Developed custom CNN, GRU/LSTM, and cross-attention architectures incorporating Monte Carlo Dropout for uncertainty quantification. Constructed 9 forward models to predict pressure/thrust curves and 9 inverse models to recover geometric parameters from desired performance curves. Deployed via an interactive Streamlit application.",
     results: "Achieved up to 98.6% R² score on curve prediction and sub-2% MAPE on geometric parameter recovery. Successfully replaced CFD simulations with millisecond-level neural inference while quantifying predictive uncertainty.",
     techDetails: [
-      { title: "🚀 18 Neural Pipelines", desc: "Constructed 9 forward models (geometry → pressure/thrust curves) and 9 inverse models (desired performance → geometric parameters) to replace CFD simulations." },
-      { title: "🧠 Deep Learning Architectures", desc: "Custom CNNs for spatial geometric features, GRU/LSTM for temporal burn-back profiles, and cross-attention mechanisms for complex multi-parameter interactions." },
-      { title: "📊 Uncertainty Quantification", desc: "Implemented Monte Carlo Dropout to estimate predictive variance and epistemic uncertainty, ensuring safety-critical reliability in rocket motor predictions." },
-      { title: "⚡ Millisecond Inference & Recovery", desc: "Reduced simulation latency from hours down to milliseconds, accelerating design iteration cycles by several orders of magnitude with sub-2% MAPE." }
+      { title: "18 Neural Pipelines", desc: "Constructed 9 forward models (geometry → pressure/thrust curves) and 9 inverse models (desired performance → geometric parameters) to replace CFD simulations." },
+      { title: "Deep Learning Architectures", desc: "Custom CNNs for spatial geometric features, GRU/LSTM for temporal burn-back profiles, and cross-attention mechanisms for complex multi-parameter interactions." },
+      { title: "Uncertainty Quantification", desc: "Implemented Monte Carlo Dropout to estimate predictive variance and epistemic uncertainty, ensuring safety-critical reliability in rocket motor predictions." },
+      { title: "Millisecond Inference & Recovery", desc: "Reduced simulation latency from hours down to milliseconds, accelerating design iteration cycles by several orders of magnitude with sub-2% MAPE." }
     ],
     kpis: [
       { val: "98.6%", label: "Peak R² Score" },
@@ -2046,10 +1975,10 @@ const projectData = {
     approach: "Engineered an advanced NLP pipeline including thorough Data Cleaning, Tokenization, and Padding. Developed a hybrid Deep Learning architecture combining CNNs for local feature extraction and BiLSTMs for bidirectional sequence context retention.",
     results: "Achieved an outstanding 94.58% Accuracy and 0.9860 ROC-AUC after rigorous Hyperparameter Tuning and Early Stopping. The model successfully differentiates nuanced sentiment, offering reliable business intelligence for e-commerce platforms.",
     techDetails: [
-      { title: "🏗️ Model Architecture", desc: "Hybrid CNN + BiLSTM with Embedding Layer (128d) → Conv1D (128 filters) → MaxPool → BiLSTM (64 units) → Dense + Dropout (0.5) → Sigmoid output" },
-      { title: "⚙️ Training Pipeline", desc: "Adam optimizer with learning rate scheduling, binary cross-entropy loss, batch size 64, 15 epochs with EarlyStopping (patience=3) and ModelCheckpoint" },
-      { title: "🔬 Data Processing", desc: "Text cleaning, lowercasing, stopword removal, tokenization with vocab size 20K, sequence padding to max length 200, 80/20 train-test split" },
-      { title: "🎛️ Hyperparameter Tuning", desc: "Grid search over embedding dimensions (64-256), filter sizes, LSTM units, dropout rates, and learning rates. Best config validated on holdout set" }
+      { title: "Model Architecture", desc: "Hybrid CNN + BiLSTM with Embedding Layer (128d) → Conv1D (128 filters) → MaxPool → BiLSTM (64 units) → Dense + Dropout (0.5) → Sigmoid output" },
+      { title: "Training Pipeline", desc: "Adam optimizer with learning rate scheduling, binary cross-entropy loss, batch size 64, 15 epochs with EarlyStopping (patience=3) and ModelCheckpoint" },
+      { title: "Data Processing", desc: "Text cleaning, lowercasing, stopword removal, tokenization with vocab size 20K, sequence padding to max length 200, 80/20 train-test split" },
+      { title: "Hyperparameter Tuning", desc: "Grid search over embedding dimensions (64-256), filter sizes, LSTM units, dropout rates, and learning rates. Best config validated on holdout set" }
     ],
     kpis: [
       { val: "94.58%", label: "Accuracy" },
@@ -2069,10 +1998,10 @@ const projectData = {
     approach: "Developed an End-to-End ML pipeline using Random Forest. Implemented precision threshold tuning, optimizing specifically for recall to ensure high-value leads are never missed.",
     results: "Improved Campaign ROI by 23%, achieving 89.3% accuracy and boosting recall from 35% to 50%, enabling smarter budget allocation.",
     techDetails: [
-      { title: "🏗️ Model Architecture", desc: "Random Forest Classifier with 200 estimators, max_depth=15, min_samples_split=5. Feature importance analysis via Gini impurity" },
-      { title: "⚙️ Training Pipeline", desc: "Stratified K-Fold (5 folds) cross-validation, SMOTE for class imbalance, StandardScaler normalization, Grid Search for hyperparameters" },
-      { title: "🔬 Data Processing", desc: "Missing value imputation, outlier detection via IQR, one-hot encoding for categoricals, feature engineering with domain-specific interaction terms" },
-      { title: "🎯 Threshold Optimization", desc: "Custom threshold tuning from 0.5 to optimized 0.35 to maximize recall while maintaining acceptable precision for marketing use case" }
+      { title: "Model Architecture", desc: "Random Forest Classifier with 200 estimators, max_depth=15, min_samples_split=5. Feature importance analysis via Gini impurity" },
+      { title: "Training Pipeline", desc: "Stratified K-Fold (5 folds) cross-validation, SMOTE for class imbalance, StandardScaler normalization, Grid Search for hyperparameters" },
+      { title: "Data Processing", desc: "Missing value imputation, outlier detection via IQR, one-hot encoding for categoricals, feature engineering with domain-specific interaction terms" },
+      { title: "Threshold Optimization", desc: "Custom threshold tuning from 0.5 to optimized 0.35 to maximize recall while maintaining acceptable precision for marketing use case" }
     ],
     kpis: [
       { val: "89.3%", label: "Accuracy" },
@@ -2092,10 +2021,10 @@ const projectData = {
     approach: "Built a robust XGBoost classification model. Engineered a Profit-Based Priority Score by multiplying churn probability with CLTV. Deployed via an XAI-powered Streamlit app utilizing SHAP.",
     results: "Successfully identified $3.68M at risk, providing business teams with a transparent, explainable dashboard to allocate retention budgets intelligently.",
     techDetails: [
-      { title: "🏗️ Model Architecture", desc: "XGBoost Classifier with 300 boosting rounds, max_depth=6, learning_rate=0.1, subsample=0.8, colsample_bytree=0.8" },
-      { title: "💰 Revenue Engineering", desc: "Custom Profit-Based Priority Score = P(churn) × CLTV. Segments: Critical (>$5K), High (>$2K), Medium (>$1K), Monitor (<$1K)" },
-      { title: "🔍 Explainability (XAI)", desc: "SHAP TreeExplainer for global and local feature importance. Interactive waterfall plots in Streamlit for individual customer explanations" },
-      { title: "🚀 Deployment", desc: "Full Streamlit web application with customer lookup, risk scoring dashboard, batch prediction mode, and SHAP visualization panels" }
+      { title: "Model Architecture", desc: "XGBoost Classifier with 300 boosting rounds, max_depth=6, learning_rate=0.1, subsample=0.8, colsample_bytree=0.8" },
+      { title: "Revenue Engineering", desc: "Custom Profit-Based Priority Score = P(churn) × CLTV. Segments: Critical (>$5K), High (>$2K), Medium (>$1K), Monitor (<$1K)" },
+      { title: "Explainability (XAI)", desc: "SHAP TreeExplainer for global and local feature importance. Interactive waterfall plots in Streamlit for individual customer explanations" },
+      { title: "Deployment", desc: "Full Streamlit web application with customer lookup, risk scoring dashboard, batch prediction mode, and SHAP visualization panels" }
     ],
     kpis: [
       { val: "$3.68M", label: "Revenue at Risk" },
@@ -2115,10 +2044,10 @@ const projectData = {
     approach: "Pivoted to a two-phase Transfer Learning strategy using EfficientNetB0. Phase 1: frozen backbone + custom head. Phase 2: selective fine-tuning with low LR.",
     results: "Completely resolved the overfitting gap, achieving a highly robust 93.6% test accuracy with consistent train-test performance.",
     techDetails: [
-      { title: "🏗️ Model Architecture", desc: "EfficientNetB0 (ImageNet weights) → GlobalAveragePooling2D → Dense(256, ReLU) → Dropout(0.4) → Dense(6, Softmax) for 6-class output" },
-      { title: "📐 Two-Phase Strategy", desc: "Phase 1: Freeze all EfficientNet layers, train head for 10 epochs. Phase 2: Unfreeze top 30 layers, fine-tune with 1e-5 LR for 15 epochs" },
-      { title: "🛡️ Regularization", desc: "Data augmentation (rotation, flip, zoom, shift), Dropout 0.4, L2 weight decay, ReduceLROnPlateau, EarlyStopping" },
-      { title: "📊 Evaluation", desc: "Confusion matrix analysis, per-class precision/recall, t-SNE visualization of learned embeddings, GradCAM attention maps" }
+      { title: "Model Architecture", desc: "EfficientNetB0 (ImageNet weights) → GlobalAveragePooling2D → Dense(256, ReLU) → Dropout(0.4) → Dense(6, Softmax) for 6-class output" },
+      { title: "Two-Phase Strategy", desc: "Phase 1: Freeze all EfficientNet layers, train head for 10 epochs. Phase 2: Unfreeze top 30 layers, fine-tune with 1e-5 LR for 15 epochs" },
+      { title: "Regularization", desc: "Data augmentation (rotation, flip, zoom, shift), Dropout 0.4, L2 weight decay, ReduceLROnPlateau, EarlyStopping" },
+      { title: "Evaluation", desc: "Confusion matrix analysis, per-class precision/recall, t-SNE visualization of learned embeddings, GradCAM attention maps" }
     ],
     kpis: [
       { val: "93.6%", label: "Test Accuracy" },
@@ -2138,10 +2067,10 @@ const projectData = {
     approach: "Analyzed a $15.8M+ sales dataset using SQL for extraction and Power BI (DAX) for dynamic visualization and dashboarding across multiple operational dimensions.",
     results: "Identified a critical 9.28-day average logistics delay. Revealed that 78% of transactions were credit card-based, enabling finance to optimize payment flows.",
     techDetails: [
-      { title: "🗄️ Data Architecture", desc: "Multi-table relational model: Orders, Products, Customers, Payments, Reviews, Geolocation. Star schema design for optimal BI performance" },
-      { title: "📊 Dashboard Design", desc: "Executive KPI dashboard with drill-through pages for Logistics, Revenue by Category, Customer Geography, and Payment Analysis" },
-      { title: "🔍 SQL Analysis", desc: "Complex joins across 8 tables, window functions for running totals, CTEs for delivery time calculations, subqueries for cohort analysis" },
-      { title: "📈 DAX Measures", desc: "40+ custom DAX measures including YoY growth, moving averages, delivery SLA compliance rates, and customer lifetime metrics" }
+      { title: "Data Architecture", desc: "Multi-table relational model: Orders, Products, Customers, Payments, Reviews, Geolocation. Star schema design for optimal BI performance" },
+      { title: "Dashboard Design", desc: "Executive KPI dashboard with drill-through pages for Logistics, Revenue by Category, Customer Geography, and Payment Analysis" },
+      { title: "SQL Analysis", desc: "Complex joins across 8 tables, window functions for running totals, CTEs for delivery time calculations, subqueries for cohort analysis" },
+      { title: "DAX Measures", desc: "40+ custom DAX measures including YoY growth, moving averages, delivery SLA compliance rates, and customer lifetime metrics" }
     ],
     kpis: [
       { val: "$15.8M+", label: "Revenue Analyzed" },
@@ -2161,10 +2090,10 @@ const projectData = {
     approach: "Analyzed 4,000+ movies spanning $528B in revenue. Developed a custom Weighted Rating model in Power BI that accounts for both score quality and total vote count.",
     results: "Proved that genre strategy and director selection are the most reliable predictors of financial performance, delivering strategic insights for production investments.",
     techDetails: [
-      { title: "📐 Weighted Rating Model", desc: "WR = (v/(v+m)) × R + (m/(v+m)) × C, where v=vote count, m=minimum votes threshold, R=average rating, C=global mean" },
-      { title: "📊 Multi-Dimensional Analysis", desc: "Genre profitability matrix, director ROI rankings, seasonal release patterns, budget-to-revenue ratios, franchise vs. original performance" },
-      { title: "🗄️ Data Modeling", desc: "Normalized data model with fact and dimension tables. Genre bridge table for many-to-many relationships. Calendar table for time intelligence" },
-      { title: "📈 Visualization Strategy", desc: "Interactive scatter plots for budget vs revenue, treemaps for genre distribution, waterfall charts for profit decomposition" }
+      { title: "Weighted Rating Model", desc: "WR = (v/(v+m)) × R + (m/(v+m)) × C, where v=vote count, m=minimum votes threshold, R=average rating, C=global mean" },
+      { title: "Multi-Dimensional Analysis", desc: "Genre profitability matrix, director ROI rankings, seasonal release patterns, budget-to-revenue ratios, franchise vs. original performance" },
+      { title: "Data Modeling", desc: "Normalized data model with fact and dimension tables. Genre bridge table for many-to-many relationships. Calendar table for time intelligence" },
+      { title: "Visualization Strategy", desc: "Interactive scatter plots for budget vs revenue, treemaps for genre distribution, waterfall charts for profit decomposition" }
     ],
     kpis: [
       { val: "4,000+", label: "Movies" },
@@ -2184,10 +2113,10 @@ const projectData = {
     approach: "Automated reporting pipelines and unified 10+ KPIs into a single Tableau interface. Conducted deep customer segmentation analysis using RFM methodology.",
     results: "Cut manual reporting time by 70%. Identified a top customer cohort generating 65% of revenue, leading to retention campaigns that reduced churn by 12%.",
     techDetails: [
-      { title: "📊 KPI Framework", desc: "10+ KPIs: Revenue, AOV, Conversion Rate, Churn Rate, CLV, Customer Acquisition Cost, Retention Rate, Revenue per Segment, Growth Rate, NPS proxy" },
-      { title: "👥 Segmentation", desc: "RFM (Recency, Frequency, Monetary) analysis with K-Means clustering. 5 segments: Champions, Loyal, At-Risk, Hibernating, Lost" },
-      { title: "⚡ Automation", desc: "Auto-refreshing data connections, scheduled extract refreshes, calculated fields for dynamic period comparisons (MTD, QTD, YTD)" },
-      { title: "🎯 Impact Analysis", desc: "Cohort-based retention tracking, revenue attribution by segment, churn prediction indicators, campaign performance correlation" }
+      { title: "KPI Framework", desc: "10+ KPIs: Revenue, AOV, Conversion Rate, Churn Rate, CLV, Customer Acquisition Cost, Retention Rate, Revenue per Segment, Growth Rate, NPS proxy" },
+      { title: "Segmentation", desc: "RFM (Recency, Frequency, Monetary) analysis with K-Means clustering. 5 segments: Champions, Loyal, At-Risk, Hibernating, Lost" },
+      { title: "Automation", desc: "Auto-refreshing data connections, scheduled extract refreshes, calculated fields for dynamic period comparisons (MTD, QTD, YTD)" },
+      { title: "Impact Analysis", desc: "Cohort-based retention tracking, revenue attribution by segment, churn prediction indicators, campaign performance correlation" }
     ],
     kpis: [
       { val: "70%", label: "Time Saved" },
@@ -2207,10 +2136,10 @@ const projectData = {
     approach: "Preprocessed +162,000 real customer complaints with custom cleaning, lowercasing, stopword removal, and lemmatization. Addressed class imbalance using cost-sensitive Class Weights instead of synthetic sampling. Built and benchmarked 3 custom baseline architectures (SimpleRNN, LSTM, GRU) from scratch with identical structures, and fine-tuned HuggingFace's DistilBERT model. Deployed the top model as an interactive Gradio web app.",
     results: "DistilBERT achieved top performance with 85.2% Macro F1-score, closely followed by GRU at 82.9% (outperforming SimpleRNN's 29.5%). Demonstrated that GRU is the optimal production choice due to a minimal ~2.3% F1 difference with drastically faster inference and lower compute costs.",
     techDetails: [
-      { title: "🧹 Preprocessing & Class Weights", desc: "Cleaned raw text (links, symbols, lowercasing), removed stopwords, and applied NLTK lemmatization. Handled severe class imbalance using cost-sensitive class weights during training." },
-      { title: "🏗️ Baselines vs Transformer", desc: "Trained SimpleRNN (29.5% F1), LSTM (81.5% F1), and GRU (82.9% F1) from scratch with identical architecture to measure gating mechanics, comparing against fine-tuned DistilBERT (85.2% F1)." },
-      { title: "⏱️ Production Cost Benchmarking", desc: "Proved that GRU offers near-transformer performance (~2.3% F1 gap) with significantly faster inference latency and lower compute costs, ideal for real-time production deployment." },
-      { title: "🚀 Interactive Gradio Deployment", desc: "Deployed the optimal model via a user-friendly Gradio web application allowing support teams to paste raw complaints and receive instant predictions with class confidence scores." }
+      { title: "Preprocessing & Class Weights", desc: "Cleaned raw text (links, symbols, lowercasing), removed stopwords, and applied NLTK lemmatization. Handled severe class imbalance using cost-sensitive class weights during training." },
+      { title: "Baselines vs Transformer", desc: "Trained SimpleRNN (29.5% F1), LSTM (81.5% F1), and GRU (82.9% F1) from scratch with identical architecture to measure gating mechanics, comparing against fine-tuned DistilBERT (85.2% F1)." },
+      { title: "Production Cost Benchmarking", desc: "Proved that GRU offers near-transformer performance (~2.3% F1 gap) with significantly faster inference latency and lower compute costs, ideal for real-time production deployment." },
+      { title: "Interactive Gradio Deployment", desc: "Deployed the optimal model via a user-friendly Gradio web application allowing support teams to paste raw complaints and receive instant predictions with class confidence scores." }
     ],
     kpis: [
       { val: "85.2%", label: "DistilBERT F1" },
@@ -2230,10 +2159,10 @@ const projectData = {
     approach: "Collected and annotated a dataset for 3 road damage classes. Conducted empirical benchmarking across 3 object detection architectures (YOLOv8n, YOLO11n, YOLO26n) evaluating mAP50, mAP50-95, Precision, Recall, inference speed (FPS), and model size. Trained the winning YOLOv8n model for 100 epochs with early stopping, exported to ONNX format, and built a Streamlit web app for automated video analysis.",
     results: "YOLOv8n delivered outstanding performance with 89.8% mAP50, 89.4% Precision, and 84.6% Recall at ~104 FPS inference speed. The Streamlit app automatically parses uploaded videos and generates structured damage detection summaries.",
     techDetails: [
-      { title: "🎯 Multi-Architecture Benchmarking", desc: "Rigorous empirical comparison of YOLOv8n, YOLO11n, and YOLO26n under identical training conditions, evaluating precision, recall, mAP50, mAP50-95, model size, and inference latency." },
-      { title: "🏋️ Training & ONNX Export", desc: "Trained for 100 epochs with dynamic data augmentation and early stopping. Exported trained weights to ONNX format for accelerated CPU/GPU deployment." },
-      { title: "📹 Automated Video Processing", desc: "Engineered frame-by-frame inference pipeline using OpenCV to process raw video feeds, bounding damaged road elements with class labels and confidence scores." },
-      { title: "🚀 Interactive Streamlit Dashboard", desc: "Built a web app allowing users to upload inspection videos, preview real-time detections, and download automated summary reports of identified hazards." }
+      { title: "Multi-Architecture Benchmarking", desc: "Rigorous empirical comparison of YOLOv8n, YOLO11n, and YOLO26n under identical training conditions, evaluating precision, recall, mAP50, mAP50-95, model size, and inference latency." },
+      { title: "Training & ONNX Export", desc: "Trained for 100 epochs with dynamic data augmentation and early stopping. Exported trained weights to ONNX format for accelerated CPU/GPU deployment." },
+      { title: "Automated Video Processing", desc: "Engineered frame-by-frame inference pipeline using OpenCV to process raw video feeds, bounding damaged road elements with class labels and confidence scores." },
+      { title: "Interactive Streamlit Dashboard", desc: "Built a web app allowing users to upload inspection videos, preview real-time detections, and download automated summary reports of identified hazards." }
     ],
     kpis: [
       { val: "89.8%", label: "mAP50" },
@@ -2253,10 +2182,10 @@ const projectData = {
     approach: "Cleaned and consolidated a fragmented raw dataset into a leak-free 80/10/10 stratified split. Evaluated 4 distinct architectures: custom CNN (from scratch with Conv + BatchNorm + Dropout), MobileNetV2, ResNet50, and EfficientNetB0 — enforcing model-specific preprocessing pipelines for fair benchmarking. Deployed live on Hugging Face Spaces.",
     results: "ResNet50 achieved top performance (~87% validation accuracy) with minimal train-validation generalization gap. The live Gradio web application on Hugging Face Spaces enables instant browser-based diagnostic predictions.",
     techDetails: [
-      { title: "📂 Data Cleaning & Stratification", desc: "Resolved directory duplication, missing files, and class overlap. Created a leak-free, stratified train/validation/test split (80/10/10) across 6 oral conditions." },
-      { title: "🧠 4-Model Head-to-Head Evaluation", desc: "Benchmarked custom CNN (Conv+BatchNorm+Dropout), MobileNetV2, ResNet50, and EfficientNetB0, ensuring each model used its native pre-processing pipeline." },
-      { title: "🛡️ Generalization & Robustness", desc: "ResNet50 demonstrated superior feature extraction and minimal train/val variance (~87% val accuracy), proving true generalization over memorization on dental imagery." },
-      { title: "🌐 Live Hugging Face Deployment", desc: "Built an interactive Gradio interface deployed live on Hugging Face Spaces, providing instant class confidence scores and visual predictions." }
+      { title: "Data Cleaning & Stratification", desc: "Resolved directory duplication, missing files, and class overlap. Created a leak-free, stratified train/validation/test split (80/10/10) across 6 oral conditions." },
+      { title: "4-Model Head-to-Head Evaluation", desc: "Benchmarked custom CNN (Conv+BatchNorm+Dropout), MobileNetV2, ResNet50, and EfficientNetB0, ensuring each model used its native pre-processing pipeline." },
+      { title: "Generalization & Robustness", desc: "ResNet50 demonstrated superior feature extraction and minimal train/val variance (~87% val accuracy), proving true generalization over memorization on dental imagery." },
+      { title: "Live Hugging Face Deployment", desc: "Built an interactive Gradio interface deployed live on Hugging Face Spaces, providing instant class confidence scores and visual predictions." }
     ],
     kpis: [
       { val: "~87%", label: "Val Accuracy" },
