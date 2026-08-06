@@ -1383,6 +1383,24 @@ section { padding: 100px 5vw; }
         </div>
       </div>
 
+      <!-- NSST Space AI Agent -->
+      <div class="project-card reveal" onclick="openProjectModal('nsst-agent')">
+        <div class="featured-badge"><svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Agentic AI</div>
+        <div class="project-img-wrap">
+          <img src="projects/nsst-space-ai-agent.jpg" alt="NSST Space AI Agent" loading="lazy">
+          <div class="project-img-overlay"><span class="view-case-btn">View Deep Dive</span></div>
+        </div>
+        <div class="project-content">
+          <div class="project-title">NSST Space AI Agent</div>
+          <div class="project-subtitle">Autonomous Agentic RAG · LangGraph · ChromaDB · Groq Llama 3</div>
+          <div class="project-desc">Architected an Autonomous Agentic RAG Pipeline with Self-Correction &amp; Reasoning Loops over 35,000+ vector chunks from space technology literature.</div>
+          <div class="project-metrics">
+            <span class="metric-badge">35K+ Vector Chunks</span><span class="metric-badge">Llama 3.3 70B</span><span class="metric-badge">Zero Hallucination Design</span>
+          </div>
+          <div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">LangGraph</span><span class="stack-tag">ChromaDB</span><span class="stack-tag">Groq</span><span class="stack-tag">Streamlit</span></div>
+        </div>
+      </div>
+
       <!-- Consumer Complaint Classification -->
       <div class="project-card reveal" onclick="openProjectModal('complaint')">
         <div class="project-img-wrap">
@@ -1943,6 +1961,29 @@ window.closeCertModal = function() {
 // PROJECT CASE STUDY DATA (ENHANCED)
 // ═══════════════════════════════════════
 const projectData = {
+  "nsst-agent": {
+    title: "NSST Space AI Agent",
+    img: "projects/nsst-space-ai-agent.jpg",
+    stack: ["Python", "LangGraph", "ChromaDB", "Groq", "Llama 3.3 70B", "Streamlit", "RAG", "Agentic AI"],
+    overview: "Architected an Autonomous Agentic RAG Pipeline leveraging LangGraph and ChromaDB to retrieve and synthesize academic knowledge across 35,000+ vector chunks from NSST space technology literature.",
+    problem: "Space technology academic knowledge is dense, fragmented across hundreds of documents, and prone to hallucination when queried with standard LLM approaches — requiring a robust retrieval and verification system.",
+    approach: "Built a LangGraph-orchestrated multi-node agentic pipeline with Document Grading and Query Rewriting nodes to self-correct retrieval failures. Integrated Groq Llama 3.3 (70B) for fast structured inference. Deployed via an interactive Streamlit glassmorphic UI with real-time agent execution status and citation tracking.",
+    results: "Achieved zero-hallucination design through Self-Correction & Reasoning Loops. The system outputs structured technical explanations with precise academic file and subject citations, backed by 35,000+ indexed vector chunks.",
+    techDetails: [
+      { title: "Agentic RAG Pipeline", desc: "LangGraph-orchestrated multi-node pipeline with Document Retrieval, Grading, Query Rewriting, and Answer Generation nodes — enabling autonomous self-correction when retrieved context is insufficient." },
+      { title: "Vector Store & Embeddings", desc: "ChromaDB vector database indexing 35,000+ chunks from NSST space technology academic corpus. Semantic search with embedding-based similarity for precise context retrieval." },
+      { title: "Groq Llama 3.3 70B Inference", desc: "Integrated Groq's ultra-low-latency API for Llama 3.3 70B inference, producing structured technical explanations with academic file and subject citations in milliseconds." },
+      { title: "Glassmorphic Streamlit UI", desc: "Interactive web application with real-time agent execution status, reasoning step visualization, and structured reference tracking — all within a modern glassmorphic dark UI." }
+    ],
+    kpis: [
+      { val: "35K+", label: "Vector Chunks" },
+      { val: "70B", label: "Llama Parameters" },
+      { val: "0", label: "Hallucination Design" },
+      { val: "RAG+Agent", label: "Architecture" }
+    ],
+    github: "https://github.com/Mohamed-ME21/NSST-Space-AI-Agent",
+    live: "https://www.linkedin.com/posts/6mohamed-shehata_datascience-machinelearning-langgraph-activity-7491069050807107584-FKmn?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEmCE_QBrtwaoHCASfF23O2c8hN3iCAYoq0"
+  },
   "rocket-surrogate": {
     title: "Deep Learning Surrogate Models for Solid Rocket Motor Grain Design",
     img: "projects/rocket-motor-grain-design.jpg",
