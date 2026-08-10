@@ -1401,6 +1401,24 @@ section { padding: 100px 5vw; }
         </div>
       </div>
 
+      <!-- NSST Agentic V2 -->
+      <div class="project-card reveal" onclick="openProjectModal('nsst-agent-v2')">
+        <div class="featured-badge"><svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Agentic AI</div>
+        <div class="project-img-wrap">
+          <img src="projects/NSST Agentic V2.webp" alt="NSST Agentic V2" loading="lazy">
+          <div class="project-img-overlay"><span class="view-case-btn">View Deep Dive</span></div>
+        </div>
+        <div class="project-content">
+          <div class="project-title">NSST Agentic V2</div>
+          <div class="project-subtitle">Corrective RAG · 7-Node LangGraph · 180K+ Chunks · FastAPI + Docker</div>
+          <div class="project-desc">Production-style Corrective RAG tutor over 180,000+ indexed chunks from aerospace &amp; navigation textbooks — with a 7-node reasoning pipeline, RAGAS evaluation, and FastAPI deployment.</div>
+          <div class="project-metrics">
+            <span class="metric-badge">180K+ Vector Chunks</span><span class="metric-badge">7-Node Pipeline</span><span class="metric-badge">RAGAS Evaluated</span>
+          </div>
+          <div class="project-stack"><span class="stack-tag">LangGraph</span><span class="stack-tag">ChromaDB</span><span class="stack-tag">Groq</span><span class="stack-tag">FastAPI</span><span class="stack-tag">Docker</span><span class="stack-tag">RAGAS</span></div>
+        </div>
+      </div>
+
       <!-- Consumer Complaint Classification -->
       <div class="project-card reveal" onclick="openProjectModal('complaint')">
         <div class="project-img-wrap">
@@ -1961,6 +1979,29 @@ window.closeCertModal = function() {
 // PROJECT CASE STUDY DATA (ENHANCED)
 // ═══════════════════════════════════════
 const projectData = {
+  "nsst-agent-v2": {
+    title: "NSST Agentic V2",
+    img: "projects/NSST Agentic V2.webp",
+    stack: ["Python", "LangGraph", "LangChain", "ChromaDB", "Groq", "gpt-oss-120b", "llama-3.1-8b-instant", "FastAPI", "Docker", "RAGAS", "LangSmith"],
+    overview: "A production-style Corrective RAG tutoring system indexing 180,000+ chunks across aerospace, navigation, and space science reference textbooks and course materials. Built to reason about questions — not just pattern-match keywords — using a 7-node LangGraph pipeline that classifies, retrieves, grades, rewrites, searches, generates, and self-verifies every answer.",
+    problem: "As a Navigation Science & Space Technology student at Beni-Suef University, reference materials (Sutton's Rocket Propulsion Elements, Groves' GNSS, Curtis' Orbital Mechanics, course PDFs) were huge, scattered, and impossible to search intelligently. Standard RAG approaches produced hallucinations and failed on vague or off-topic questions.",
+    approach: "Architected a 7-node Corrective RAG pipeline: (1) Classify — vague questions ask for clarification, off-topic questions are declined; (2) Retrieve from two separate knowledge bases (70+ reference textbooks + course PDFs); (3) Grade chunks for real relevance; (4) Rewrite and retry up to 2× if retrieval is weak; (5) Web search fallback that merges with local results; (6) Generate grounded cited response; (7) Hallucination check verifying the answer is backed by sources. Implemented a two-model architecture — gpt-oss-120b for final answers, llama-3.1-8b-instant for internal pipeline steps — to cut token usage without sacrificing quality.",
+    results: "Deployed as a FastAPI service with Docker and a custom chat interface. Evaluated with RAGAS across faithfulness, answer relevancy, context precision, and recall on a fixed test set stored in CSV. Full observability through LangSmith tracing. Opened to junior students in the faculty as a tool that cites sources instead of guessing.",
+    techDetails: [
+      { title: "7-Node LangGraph Pipeline", desc: "Classify → Retrieve (dual KB) → Grade chunks → Rewrite & retry (2×) → Web search fallback → Generate cited answer → Hallucination verification. Each node is a distinct, testable step with explicit state transitions." },
+      { title: "Dual Knowledge Base & 180K+ Chunks", desc: "Two separate ChromaDB collections: 70+ aerospace/navigation reference textbooks (Sutton, Groves, Curtis) and course PDFs. Embedding-based semantic search with chunk grading before generation." },
+      { title: "Two-Model Architecture", desc: "gpt-oss-120b (openai/gpt-oss-120b) handles only the final answer generation. llama-3.1-8b-instant handles all internal decisions (classify, grade, rewrite) — drastically cutting token usage without hurting answer quality." },
+      { title: "RAGAS Evaluation & FastAPI Deployment", desc: "Quantitative benchmarking across faithfulness, answer relevancy, context precision, and context recall on a fixed test set. Deployed as a FastAPI service containerized with Docker, with LangSmith for full pipeline observability and tracing." }
+    ],
+    kpis: [
+      { val: "180K+", label: "Vector Chunks" },
+      { val: "7", label: "Pipeline Nodes" },
+      { val: "70+", label: "Reference Books" },
+      { val: "RAGAS", label: "Evaluation" }
+    ],
+    github: "https://github.com/Mohamed-ME21/nsst-agentic",
+    live: "https://lnkd.in/p/ecpBT-MX"
+  },
   "nsst-agent": {
     title: "NSST Space AI Agent",
     img: "projects/NSST Space AI Agent.webp",
