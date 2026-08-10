@@ -601,8 +601,8 @@ section { padding: 100px 5vw; }
 .featured-elite .project-img-wrap { height: 100%; aspect-ratio: auto; border-bottom: none; border-right: 1px solid var(--border); }
 .featured-elite .project-content { padding: 2.2rem; justify-content: center; }
 .project-img-wrap { width: 100%; aspect-ratio: 16/9; position: relative; overflow: hidden; background: var(--bg3); border-bottom: 1px solid var(--border); }
-.project-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--t-med) var(--ease); }
-.project-card:hover .project-img-wrap img { transform: scale(1.04); }
+.project-img-wrap img, .project-img-wrap video { width: 100%; height: 100%; object-fit: cover; transition: transform var(--t-med) var(--ease); }
+.project-card:hover .project-img-wrap img, .project-card:hover .project-img-wrap video { transform: scale(1.04); }
 /* Image overlay — cleaner, text-only */
 .project-img-overlay {
   position: absolute; inset: 0;
@@ -676,7 +676,7 @@ section { padding: 100px 5vw; }
 .project-modal-close { position: absolute; top: 14px; right: 14px; width: 36px; height: 36px; border-radius: 50%; background: var(--surface2); border: 1px solid var(--border2); color: var(--text2); font-size: 1.5rem; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: color var(--t-fast), transform var(--t-fast); z-index: 3010; }
 .project-modal-close:hover { color: var(--text); transform: rotate(90deg); }
 .project-modal-hero { position: relative; width: 100%; height: 280px; background: var(--bg3); }
-.project-modal-hero img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.9); }
+.project-modal-hero img, .project-modal-hero video { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.9); }
 .pm-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 30%, rgba(22,27,37,1) 100%); }
 .project-modal-hero h2 { position: absolute; bottom: 20px; left: 28px; right: 28px; font-family: var(--font-head); font-size: 1.7rem; color: #fff; font-weight: 800; line-height: 1.2; }
 .project-modal-body { padding: 28px; display: flex; flex-direction: column; gap: 1.6rem; }
@@ -1359,7 +1359,7 @@ section { padding: 100px 5vw; }
       <div class="project-card reveal" onclick="openProjectModal('sentiment')">
         <div class="featured-badge"><svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Featured AI Project</div>
         <div class="project-img-wrap">
-          <img src="projects/amazon-reviews-sentiment-analysis.webp" alt="Amazon Reviews Sentiment Analysis" loading="lazy">
+          <video src="projects/videos/Amazon Reviews for Sentiment Analysis.mp4" poster="projects/amazon-reviews-sentiment-analysis.webp" autoplay loop muted playsinline preload="metadata"></video>
           <div class="project-img-overlay"><span class="view-case-btn">View Deep Dive</span></div>
         </div>
         <div class="project-content">
@@ -1387,7 +1387,7 @@ section { padding: 100px 5vw; }
       <div class="project-card reveal" onclick="openProjectModal('nsst-agent')">
         <div class="featured-badge"><svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Agentic AI</div>
         <div class="project-img-wrap">
-          <img src="projects/NSST Space AI Agent.webp" alt="NSST Space AI Agent" loading="lazy">
+          <video src="projects/videos/NSST AI Agent.mp4" poster="projects/NSST Space AI Agent.webp" autoplay loop muted playsinline preload="metadata"></video>
           <div class="project-img-overlay"><span class="view-case-btn">View Deep Dive</span></div>
         </div>
         <div class="project-content">
@@ -1405,7 +1405,7 @@ section { padding: 100px 5vw; }
       <div class="project-card reveal" onclick="openProjectModal('nsst-agent-v2')">
         <div class="featured-badge"><svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Agentic AI</div>
         <div class="project-img-wrap">
-          <img src="projects/NSST Agentic V2.webp" alt="NSST Agentic V2" loading="lazy">
+          <video src="projects/videos/NSST Agentic V2.mp4" poster="projects/NSST Agentic V2.webp" autoplay loop muted playsinline preload="metadata"></video>
           <div class="project-img-overlay"><span class="view-case-btn">View Deep Dive</span></div>
         </div>
         <div class="project-content">
@@ -1422,7 +1422,7 @@ section { padding: 100px 5vw; }
       <!-- Consumer Complaint Classification -->
       <div class="project-card reveal" onclick="openProjectModal('complaint')">
         <div class="project-img-wrap">
-          <img src="projects/Consumer Complaint Classification.webp" alt="Consumer Complaint Financial Classification" loading="lazy">
+          <video src="projects/videos/Consumer Complaint Classifier.mp4" poster="projects/Consumer Complaint Classification.webp" autoplay loop muted playsinline preload="metadata"></video>
           <div class="project-img-overlay"><span class="view-case-btn">View Case Study</span></div>
         </div>
         <div class="project-content">
@@ -1439,7 +1439,7 @@ section { padding: 100px 5vw; }
       <!-- Road Damage Object Detection -->
       <div class="project-card reveal" onclick="openProjectModal('road-damage')">
         <div class="project-img-wrap">
-          <img src="projects/Road Damage Object Detection.webp" alt="Road Damage Object Detection" loading="lazy">
+          <video src="projects/videos/Road Damage Object Detection &amp; Video Parsing.mp4" poster="projects/Road Damage Object Detection.webp" autoplay loop muted playsinline preload="metadata"></video>
           <div class="project-img-overlay"><span class="view-case-btn">View Case Study</span></div>
         </div>
         <div class="project-content">
@@ -1456,7 +1456,7 @@ section { padding: 100px 5vw; }
       <!-- Oral Diseases Image Classification -->
       <div class="project-card reveal" onclick="openProjectModal('oral-diseases')">
         <div class="project-img-wrap">
-          <img src="projects/Oral Diseases Image Classification.webp" alt="Oral Diseases Image Classification" loading="lazy">
+          <video src="projects/videos/Oral Diseases Image.mp4" poster="projects/Oral Diseases Image Classification.webp" autoplay loop muted playsinline preload="metadata"></video>
           <div class="project-img-overlay"><span class="view-case-btn">View Case Study</span></div>
         </div>
         <div class="project-content">
@@ -1982,6 +1982,7 @@ const projectData = {
   "nsst-agent-v2": {
     title: "NSST Agentic V2",
     img: "projects/NSST Agentic V2.webp",
+    video: "projects/videos/NSST Agentic V2.mp4",
     stack: ["Python", "LangGraph", "LangChain", "ChromaDB", "Groq", "gpt-oss-120b", "llama-3.1-8b-instant", "FastAPI", "Docker", "RAGAS", "LangSmith"],
     overview: "A production-style Corrective RAG tutoring system indexing 180,000+ chunks across aerospace, navigation, and space science reference textbooks and course materials. Built to reason about questions — not just pattern-match keywords — using a 7-node LangGraph pipeline that classifies, retrieves, grades, rewrites, searches, generates, and self-verifies every answer.",
     problem: "As a Navigation Science & Space Technology student at Beni-Suef University, reference materials (Sutton's Rocket Propulsion Elements, Groves' GNSS, Curtis' Orbital Mechanics, course PDFs) were huge, scattered, and impossible to search intelligently. Standard RAG approaches produced hallucinations and failed on vague or off-topic questions.",
@@ -2005,6 +2006,7 @@ const projectData = {
   "nsst-agent": {
     title: "NSST Space AI Agent",
     img: "projects/NSST Space AI Agent.webp",
+    video: "projects/videos/NSST AI Agent.mp4",
     stack: ["Python", "LangGraph", "ChromaDB", "Groq", "Llama 3.3 70B", "Streamlit", "RAG", "Agentic AI"],
     overview: "Architected an Autonomous Agentic RAG Pipeline leveraging LangGraph and ChromaDB to retrieve and synthesize academic knowledge across 35,000+ vector chunks from NSST space technology literature.",
     problem: "Space technology academic knowledge is dense, fragmented across hundreds of documents, and prone to hallucination when queried with standard LLM approaches — requiring a robust retrieval and verification system.",
@@ -2051,6 +2053,7 @@ const projectData = {
   sentiment: {
     title: "Amazon Reviews for Sentiment Analysis",
     img: "projects/amazon-reviews-sentiment-analysis.webp",
+    video: "projects/videos/Amazon Reviews for Sentiment Analysis.mp4",
     stack: ["Python", "TensorFlow", "CNN", "BiLSTM", "NLP", "Keras"],
     overview: "Analyzing massive amounts of e-commerce reviews using Deep Learning to extract actionable consumer sentiment, providing businesses with clear insights into customer satisfaction and product reception.",
     problem: "Traditional Machine Learning models like SVM and Logistic Regression failed to capture complex linguistic nuances, context, and long-text dependencies present in natural language product reviews.",
@@ -2212,6 +2215,7 @@ const projectData = {
   complaint: {
     title: "Consumer Complaint Financial Classification",
     img: "projects/Consumer Complaint Classification.webp",
+    video: "projects/videos/Consumer Complaint Classifier.mp4",
     stack: ["Python", "TensorFlow", "PyTorch", "HuggingFace", "DistilBERT", "GRU", "LSTM", "Gradio", "Scikit-learn", "NLTK"],
     overview: "An end-to-end NLP & Deep Learning system that automatically analyzes customer complaints and routes them to 1 of 5 financial departments (Credit Reporting, Debt Collection, Mortgages & Loans, Credit Card, Retail Banking), significantly speeding up complaint resolution and reducing manual routing effort.",
     problem: "Financial institutions handle hundreds of thousands of customer complaints manually. Raw complaint text is unstructured, noisy, long, and imbalanced across categories, leading to operational bottlenecks and delayed customer response times.",
@@ -2235,6 +2239,7 @@ const projectData = {
   "road-damage": {
     title: "Road Damage Object Detection & Video Parsing",
     img: "projects/Road Damage Object Detection.webp",
+    video: "projects/videos/Road Damage Object Detection & Video Parsing.mp4",
     stack: ["Python", "PyTorch", "YOLOv8", "YOLO11", "ONNX", "Streamlit", "OpenCV", "Computer Vision"],
     overview: "An automated computer vision system that monitors road infrastructure from video feeds to detect 3 critical damage types (Potholes, Open Drain Holes, Damaged Sewer Covers), replacing slow and error-prone manual road inspections.",
     problem: "Traditional road maintenance relies on manual inspections, which are slow, high-cost, dangerous, and fail to track infrastructure deterioration in real-time.",
@@ -2258,6 +2263,7 @@ const projectData = {
   "oral-diseases": {
     title: "Oral Diseases Image Classification",
     img: "projects/Oral Diseases Image Classification.webp",
+    video: "projects/videos/Oral Diseases Image.mp4",
     stack: ["Python", "TensorFlow", "Keras", "ResNet50", "EfficientNetB0", "MobileNetV2", "Gradio", "Hugging Face Spaces"],
     overview: "A deep learning medical vision application capable of detecting 6 distinct dental and oral conditions (Calculus, Caries, Gingivitis, Mouth Ulcer, Tooth Discoloration, and Hypodontia) from a single patient image.",
     problem: "Raw medical imagery datasets are often scattered, duplicated, and inconsistently structured. Normalization mismatches during transfer learning silently degrade clinical accuracy.",
@@ -2288,7 +2294,37 @@ const projectModal = document.getElementById('projectModal');
 window.openProjectModal = function(id) {
   const d = projectData[id];
   if (!d) return;
-  document.getElementById('pmImg').src = d.img;
+
+  const heroContainer = document.querySelector('.project-modal-hero');
+  const oldMedia = heroContainer.querySelector('img, video');
+  if (d.video) {
+    if (oldMedia.tagName.toLowerCase() !== 'video') {
+      const vid = document.createElement('video');
+      vid.id = 'pmImg';
+      vid.autoplay = true;
+      vid.loop = true;
+      vid.muted = true;
+      vid.playsInline = true;
+      vid.controls = true;
+      oldMedia.replaceWith(vid);
+      vid.src = d.video;
+      vid.poster = d.img;
+    } else {
+      oldMedia.src = d.video;
+      oldMedia.poster = d.img;
+    }
+  } else {
+    if (oldMedia.tagName.toLowerCase() !== 'img') {
+      const img = document.createElement('img');
+      img.id = 'pmImg';
+      img.alt = 'Project Image';
+      oldMedia.replaceWith(img);
+      img.src = d.img;
+    } else {
+      oldMedia.src = d.img;
+    }
+  }
+
   document.getElementById('pmTitle').textContent = d.title;
   document.getElementById('pmOverview').textContent = d.overview;
   document.getElementById('pmProblem').textContent = d.problem;
@@ -2328,6 +2364,8 @@ window.openProjectModal = function(id) {
 window.closeProjectModal = function() {
   projectModal.classList.remove('active');
   document.body.style.overflow = '';
+  const vid = document.querySelector('.project-modal-hero video');
+  if (vid) vid.pause();
 };
 
 // Escape key for all modals
