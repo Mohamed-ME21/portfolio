@@ -1555,6 +1555,20 @@ section { padding: 100px 5vw; }
           <div class="project-stack"><span class="stack-tag">Tableau</span><span class="stack-tag">Customer Segmentation</span><span class="stack-tag">Automation</span></div>
         </div>
       </div>
+
+      <div class="project-card reveal" onclick="openProjectModal('imdb-movies')">
+        <div class="project-img-wrap">
+          <img src="projects/IMDB-Movies-Analysis.webp" alt="IMDB Movies Analysis Dashboard" loading="lazy">
+          <div class="project-img-overlay"><span class="view-case-btn">View Case Study</span></div>
+        </div>
+        <div class="project-content">
+          <div class="project-title">IMDB Movies Analysis Dashboard</div>
+          <div class="project-subtitle">Microsoft Excel · PivotTables & PivotCharts · Interactive Slicers</div>
+          <div class="project-desc">End-to-end Excel data analysis exploring 3,851 movies, transforming raw movie data into a decision-ready multi-page dashboard.</div>
+          <div class="project-metrics"><span class="metric-badge">3,851 movies</span><span class="metric-badge">$528.2M Revenue</span><span class="metric-badge">$357.7M Profit</span></div>
+          <div class="project-stack"><span class="stack-tag">Microsoft Excel</span><span class="stack-tag">PivotTables</span><span class="stack-tag">PivotCharts</span><span class="stack-tag">Slicers</span></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -2284,6 +2298,29 @@ const projectData = {
     ],
     github: "https://github.com/Mohamed-ME21",
     live: "https://www.linkedin.com/posts/6mohamed-shehata_deeplearning-computervision-machinelearning-activity-7483185801380614145-Eu-v?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEmCE_QBrtwaoHCASfF23O2c8hN3iCAYoq0"
+  },
+  "imdb-movies": {
+    title: "IMDB Movies Analysis Dashboard",
+    img: "projects/IMDB-Movies-Analysis.webp",
+    stack: ["Microsoft Excel", "PivotTables", "PivotCharts", "Interactive Slicers", "Data Cleaning", "Inflation Adjustment"],
+    overview: "An end-to-end data analysis project exploring 3,851 movies from the IMDB dataset, built entirely in Excel using PivotTables, PivotCharts, and interactive Slicers. The project transforms raw movie data into a decision-ready dashboard covering financial performance, genre trends, director rankings, and audience popularity.",
+    problem: "Raw movie datasets contain inflation-unadjusted financial figures and scattered multidimensional variables (budget, revenue, genres, directors, ratings) that make strategic commercial evaluation difficult without an interactive visual interface.",
+    approach: "Cleaned raw movie data and derived inflation-adjusted figures (budget_adj, revenue_adj, profit_adj). Built an interactive multi-page dark-themed Excel dashboard utilizing dynamic PivotTables, PivotCharts, and synchronized Slicers (Genre, Year).",
+    results: "Action emerged as the top-performing genre across budget, revenue, and profit shares. Identified Steven Spielberg as top revenue-generating director and Christopher Nolan as top in popularity. Discovered mid-budget films like Mad Max: Fury Road & Interstellar competing with highest-budget titles in audience reach.",
+    techDetails: [
+      { title: "Financial Performance Analysis", desc: "Top 10 movies and directors by budget, revenue, and profit. Analyzed runtime vs. popularity trends across financial cohorts." },
+      { title: "Genre Analysis", desc: "Top genres by budget allocation, revenue share, and profit share percentage breakdowns, highlighting Action & Adventure market dominance." },
+      { title: "Director & Star Popularity", desc: "Top 10 Director revenue & popularity rankings (Spielberg, Nolan, Peter Jackson), Top 10 Star popularity (Johnny Depp, Tom Hanks, Tom Cruise), and vote count vs revenue correlation." },
+      { title: "Dashboard Architecture & Cleaning", desc: "Data cleaning, inflation-adjusted KPI calculations (budget_adj, revenue_adj, profit_adj), and custom dark-themed UI layout with cross-filtering Slicers." }
+    ],
+    kpis: [
+      { val: "3,851", label: "Movies Analyzed" },
+      { val: "$528.2M", label: "Total Revenue" },
+      { val: "$357.7M", label: "Total Profit" },
+      { val: "$170.5M", label: "Total Budget" }
+    ],
+    github: "https://github.com/Mohamed-ME21/IMDB-Movies-Analysis",
+    live: "https://lnkd.in/p/e5RuHmBG"
   }
 };
 
