@@ -1423,7 +1423,7 @@ section { padding: 100px 5vw; }
       <div class="project-card reveal" onclick="openProjectModal('transformer-scratch')">
         <div class="featured-badge"><svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Deep Learning &amp; NLP Architecture</div>
         <div class="project-img-wrap">
-          <img src="projects/Transformer_Arch.jpg" alt="Transformer from Scratch (PyTorch)" loading="lazy">
+          <img src="projects/Transformer_Arch.webp" alt="Transformer from Scratch (PyTorch)" loading="lazy">
           <div class="project-img-overlay"><span class="view-case-btn">View Deep Dive</span></div>
         </div>
         <div class="project-content">
@@ -2014,7 +2014,7 @@ window.closeCertModal = function() {
 const projectData = {
   "transformer-scratch": {
     title: "Transformer from Scratch (PyTorch)",
-    img: "projects/Transformer_Arch.jpg",
+    img: "projects/Transformer_Arch.webp",
     stack: ["Python", "PyTorch", "Multi-Head Attention", "Positional Encoding", "Encoder-Decoder", "GPT Decoder-Only", "NLP", "Deep Learning"],
     overview: "A from-scratch implementation of the Transformer architecture in PyTorch, written to understand every algorithmic piece of the architecture instead of relying on high-level abstractions like nn.Transformer. The notebook builds two complete models on the same shared foundational components: an Encoder-Decoder Transformer for English → Arabic translation, and a GPT-style decoder-only model for next-token prediction and autoregressive text generation.",
     problem: "Modern deep learning libraries abstract Transformer internals behind black-box layers (nn.Transformer, HuggingFace transformers). This hides crucial mechanics such as scaled dot-product attention calculation, causal masking vs. padding masks, sinusoidal positional encodings, cross-attention projection, and teacher-forcing training loops.",
