@@ -1528,6 +1528,25 @@ section { padding: 100px 5vw; }
         </div>
       </div>
 
+      <!-- El-Sharnouby Group Business Intelligence Analysis -->
+      <div class="project-card reveal" onclick="openProjectModal('sharnouby-enterprise')">
+        <div class="featured-badge"><svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Enterprise BI &amp; Operations</div>
+        <div class="project-img-wrap">
+          <img src="projects/Sharnouby_Enterprise.webp" alt="El-Sharnouby Group Business Intelligence Analysis" loading="lazy">
+          <div class="project-img-overlay"><span class="view-case-btn">View Deep Dive</span></div>
+        </div>
+        <div class="project-content">
+          <div class="project-title">El-Sharnouby Group Enterprise BI Analysis</div>
+          <div class="project-subtitle">Power BI · 19 Relational Tables · Supply Chain &amp; Profitability Modeling</div>
+          <div class="project-desc">Consolidated 19 relational tables into one enterprise Power BI model across 421M in net sales (2023–2026). Uncovered wholesale margin leaks, simulated discount capping for ~19M gross profit gain, and identified operational bottlenecks.</div>
+          <div class="project-metrics">
+            <span class="metric-badge">421M Net Sales</span><span class="metric-badge">~19M Profit Opportunity</span><span class="metric-badge">19 Relational Tables</span>
+          </div>
+          <div class="project-stack"><span class="stack-tag">Power BI</span><span class="stack-tag">DAX</span><span class="stack-tag">Data Modeling</span><span class="stack-tag">Supply Chain</span><span class="stack-tag">Business Intelligence</span></div>
+        </div>
+      </div>
+
+
       <!-- Consumer Complaint Classification -->
       <div class="project-card reveal" onclick="openProjectModal('complaint')">
         <div class="project-img-wrap">
@@ -2130,6 +2149,30 @@ const projectData = {
     github: "https://github.com/Mohamed-ME21/Build_Transformer_from_scratch",
     live: "https://lnkd.in/p/ekTmtnd8"
   },
+  "sharnouby-enterprise": {
+    title: "El-Sharnouby Group Business Intelligence Analysis",
+    img: "projects/Sharnouby_Enterprise.webp",
+    stack: ["Power BI", "DAX", "Data Modeling", "Business Intelligence", "Supply Chain Analytics", "Sales & Profitability", "ETL & Star Schema"],
+    overview: "An enterprise-grade Business Intelligence system engineered for El-Sharnouby Group (a multi-entity textile enterprise), consolidating 19 relational tables spanning sales, inventory, production, and procurement into a unified Power BI analytical model. Analyzed 421M in net sales (2023–2026) to diagnose margin erosion, discount leakage, and operational supply chain bottlenecks.",
+    problem: "The enterprise operated with fragmented visibility across procurement, factory production lines, central warehousing, and wholesale/retail distribution. Wholesale generated 85% of total sales volume but delivered a slim 11.9% gross margin compared to 37% in retail, caused by flat 28–38% discounts that bought no incremental order volume. Compounding this, undetected supply delays, late production batches, and frequent stockouts silently eroded profitability.",
+    approach: "Architected a high-performance star-schema data model in Power BI integrating 19 normalized relational tables across commercial and manufacturing domains. Developed advanced DAX measures for dynamic margin decomposition, wholesale vs. retail elasticity, delivery SLA tracking, and safety stock thresholds. Conducted root-cause operational diagnostics across supplier reliability, production queue compliance, and Cost of Poor Quality (COPQ) across 4 years of transactional data.",
+    results: "Uncovered that wholesale drove 85% of volume at only 11.9% margin vs 37% in retail. Proved that capping wholesale discounts at 28% recaptures ~19M in additional gross profit without impacting order volume. Pinpointed critical operational leakages: supplier on-time delivery at 65% (with one primary supplier at 40%), 16% late production orders, Cost of Poor Quality (COPQ) equaling 41% of gross profit, and stockouts causing 9.2M in lost revenue.",
+    techDetails: [
+      { title: "19-Table Enterprise Data Modeling", desc: "Engineered an integrated star-schema data architecture unifying 19 tables across sales, inventory, production batches, and procurement with zero relationship ambiguity." },
+      { title: "Wholesale Margin & Discount Capping", desc: "Diagnosed margin compression where wholesale drove 85% volume at 11.9% margin; mathematically proved capping discounts at 28% yields an immediate ~19M gross profit upside." },
+      { title: "Supplier Reliability & Procurement Diagnostics", desc: "Tracked supplier delivery SLAs revealing a 65% aggregate on-time delivery rate, pinpointing an underperforming supplier at 40% on-time delivery directly triggering production delays." },
+      { title: "Production Queue SLAs & Stockout Revenue Loss", desc: "Quantified 16% late production batches, scrap/rework costs totaling 41% of gross profit, and inventory stockouts resulting in 9.2M in preventable lost revenue." }
+    ],
+    kpis: [
+      { val: "421M", label: "Net Sales Analyzed" },
+      { val: "~19M", label: "Gross Profit Gain" },
+      { val: "19 Tables", label: "Relational Model" },
+      { val: "9.2M", label: "Stockout Revenue Leak" }
+    ],
+    github: "https://github.com/Mohamed-ME21/El-Sharnouby-",
+    live: "https://lnkd.in/p/eZfk-Da6"
+  },
+
   "nsst-agent-v2": {
     title: "NSST Agentic V2",
     img: "projects/NSST Agentic V2.webp",
