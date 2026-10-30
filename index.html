@@ -1419,6 +1419,24 @@ section { padding: 100px 5vw; }
         </div>
       </div>
 
+      <!-- Transformer from Scratch (PyTorch) -->
+      <div class="project-card reveal" onclick="openProjectModal('transformer-scratch')">
+        <div class="featured-badge"><svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Deep Learning &amp; NLP Architecture</div>
+        <div class="project-img-wrap">
+          <img src="projects/Transformer_Arch.jpg" alt="Transformer from Scratch (PyTorch)" loading="lazy">
+          <div class="project-img-overlay"><span class="view-case-btn">View Deep Dive</span></div>
+        </div>
+        <div class="project-content">
+          <div class="project-title">Transformer from Scratch (PyTorch)</div>
+          <div class="project-subtitle">Encoder-Decoder &amp; GPT Decoder-Only · Multi-Head Attention · PyTorch</div>
+          <div class="project-desc">A ground-up implementation of the Transformer in PyTorch without relying on nn.Transformer. Implements an Encoder-Decoder for English → Arabic translation and a GPT-style decoder-only model for text generation.</div>
+          <div class="project-metrics">
+            <span class="metric-badge">From Scratch</span><span class="metric-badge">Seq2Seq + GPT</span><span class="metric-badge">CPU Friendly</span>
+          </div>
+          <div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">PyTorch</span><span class="stack-tag">Attention</span><span class="stack-tag">NLP</span><span class="stack-tag">Seq2Seq</span><span class="stack-tag">GPT</span></div>
+        </div>
+      </div>
+
       <!-- Consumer Complaint Classification -->
       <div class="project-card reveal" onclick="openProjectModal('complaint')">
         <div class="project-img-wrap">
@@ -1994,6 +2012,29 @@ window.closeCertModal = function() {
 // PROJECT CASE STUDY DATA (ENHANCED)
 // ═══════════════════════════════════════
 const projectData = {
+  "transformer-scratch": {
+    title: "Transformer from Scratch (PyTorch)",
+    img: "projects/Transformer_Arch.jpg",
+    stack: ["Python", "PyTorch", "Multi-Head Attention", "Positional Encoding", "Encoder-Decoder", "GPT Decoder-Only", "NLP", "Deep Learning"],
+    overview: "A from-scratch implementation of the Transformer architecture in PyTorch, written to understand every algorithmic piece of the architecture instead of relying on high-level abstractions like nn.Transformer. The notebook builds two complete models on the same shared foundational components: an Encoder-Decoder Transformer for English → Arabic translation, and a GPT-style decoder-only model for next-token prediction and autoregressive text generation.",
+    problem: "Modern deep learning libraries abstract Transformer internals behind black-box layers (nn.Transformer, HuggingFace transformers). This hides crucial mechanics such as scaled dot-product attention calculation, causal masking vs. padding masks, sinusoidal positional encodings, cross-attention projection, and teacher-forcing training loops.",
+    approach: "Built all foundational modules from mathematical first principles in PyTorch: (1) Scaled Dot-Product Attention with query-key scaling and causal masking; (2) Multi-Head Attention projecting queries, keys, and values into multiple subspaces; (3) Sinusoidal Positional Encoding; (4) Position-wise Feed-Forward Networks with LayerNorm and residual connections. Built two full architectures: an Encoder-Decoder translation model and a GPT-style autoregressive generation model. Designed the training pipeline to run end-to-end on CPU within minutes using compact dataset pairs (50 sentence pairs).",
+    results: "Both the Encoder-Decoder (English → Arabic translation) and the GPT decoder-only model run and train entirely on CPU in just a few minutes. The project deliberately uses compact datasets (50 sentence pairs) to focus on deep architectural understanding, tensor flows, and the training loop with stable convergence rather than translation corpus size.",
+    techDetails: [
+      { title: "Scaled Dot-Product & Multi-Head Attention", desc: "Constructed linear Q, K, V projections, scaled attention scoring (QKᵀ / √dₖ), causal look-ahead masking, and multi-head split/concatenation with output projection from scratch." },
+      { title: "Dual Architecture on Unified Components", desc: "Built two models using the exact same components: an Encoder-Decoder network for English → Arabic translation and a decoder-only GPT model for autoregressive next-token prediction." },
+      { title: "Positional Encoding & Residual Normalization", desc: "Implemented sinusoidal position embeddings to inject sequence order without recurrence, combined with Layer Normalization and residual skip connections for stable backpropagation." },
+      { title: "CPU-Friendly Training & Validation", desc: "Configured clean training loops on compact sentence pairs that converge within minutes on standard CPU, demonstrating correct architectural execution and loss reduction." }
+    ],
+    kpis: [
+      { val: "From Scratch", label: "No nn.Transformer" },
+      { val: "2 Models", label: "Seq2Seq + GPT" },
+      { val: "CPU Fast", label: "Trains in Minutes" },
+      { val: "100%", label: "Pure PyTorch" }
+    ],
+    github: "https://github.com/Mohamed-ME21/Build_Transformer_from_scratch",
+    live: "https://lnkd.in/p/ekTmtnd8"
+  },
   "nsst-agent-v2": {
     title: "NSST Agentic V2",
     img: "projects/NSST Agentic V2.webp",
