@@ -1546,6 +1546,25 @@ section { padding: 100px 5vw; }
         </div>
       </div>
 
+      <!-- Cottonil Retail Business Intelligence & Data Analysis -->
+      <div class="project-card reveal" onclick="openProjectModal('cottonil-intelligence')">
+        <div class="featured-badge"><svg viewBox="0 0 24 24" width="10" height="10" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Retail BI &amp; Analytics Platform · Nov 2026</div>
+        <div class="project-img-wrap">
+          <video src="projects/videos/Cottonil_Intelligence_Hub.mp4" poster="projects/Cottonil_Intelligence_Hub.webp" autoplay loop muted playsinline preload="metadata"></video>
+          <div class="project-img-overlay"><span class="view-case-btn">View Deep Dive</span></div>
+        </div>
+        <div class="project-content">
+          <div class="project-title">Cottonil Retail Business Intelligence &amp; Data Analysis</div>
+          <div class="project-subtitle">SQL · Python · DuckDB · React.js · FastAPI · 1.1M+ Records</div>
+          <div class="project-desc">Explored 24 relational tables and analyzed 1.1M+ sales records across 540K unique orders (3.39M+ units). Engineered an interactive full-stack BI dashboard in React.js and FastAPI covering sales, branch profitability, inventory, and operational KPIs.</div>
+          <div class="project-metrics">
+            <span class="metric-badge">1.1M+ Records</span><span class="metric-badge">3.39M+ Units</span><span class="metric-badge">24 Relational Tables</span>
+          </div>
+          <div class="project-stack"><span class="stack-tag">SQL</span><span class="stack-tag">Python</span><span class="stack-tag">DuckDB</span><span class="stack-tag">FastAPI</span><span class="stack-tag">React.js</span><span class="stack-tag">BI Analytics</span></div>
+        </div>
+      </div>
+
+
 
       <!-- Consumer Complaint Classification -->
       <div class="project-card reveal" onclick="openProjectModal('complaint')">
@@ -2193,6 +2212,31 @@ const projectData = {
     github: "https://github.com/Mohamed-ME21/El-Sharnouby-",
     live: "https://lnkd.in/p/eZfk-Da6"
   },
+  "cottonil-intelligence": {
+    title: "Cottonil Retail Business Intelligence & Data Analysis",
+    img: "projects/Cottonil_Intelligence_Hub.webp",
+    video: "projects/videos/Cottonil_Intelligence_Hub.mp4",
+    stack: ["SQL", "Python", "DuckDB", "React.js", "FastAPI", "Data Modeling", "Business Intelligence", "Retail Analytics"],
+    overview: "An enterprise Retail Business Intelligence & Analytical platform engineered for Cottonil, integrating 24 relational tables across sales, customers, products, branches, inventory, procurement, returns, marketing campaigns, and workforce. Analyzed 1.1M+ sales line records across 540K unique orders, uncovering a total sales volume of 3.39M+ units to empower data-driven operational decisions.",
+    problem: "Large retail networks struggle with disconnected operational visibility across hundreds of branches, fluctuating inventory levels, procurement lead times, and unmonitored return patterns. With over 1.1M sales line items across diverse product lines, legacy static spreadsheets were incapable of surfacing real-time profitability, store performance variances, or customer purchasing trends.",
+    approach: "Explored and modeled 24 relational tables into unified analytical schemas. Leveraged DuckDB and SQL for high-speed local data transformation and complex analytical aggregations across 1.1M+ records. Architected a full-stack interactive BI platform combining a FastAPI backend with an intuitive React.js dashboard covering sales trends, branch benchmarks, product profitability matrices, inventory status, and return KPIs.",
+    results: "Processed and analyzed 1.1M+ sales lines across 540K unique orders, detailing 3.39M+ units in total sales volume. Built a production-ready, interactive BI dashboard that gives leadership instant drill-down capabilities into branch efficiency, margin optimization, stock turnover, and customer segment value.",
+    techDetails: [
+      { title: "24-Table Relational Exploration & Modeling", desc: "Mapped business processes across 24 relational tables covering sales orders, customers, product catalog, branch hierarchy, inventory, procurement, returns, marketing, and HR workforce." },
+      { title: "1.1M+ Records Aggregation with DuckDB & SQL", desc: "Engineered performant SQL queries and leveraged DuckDB columnar processing to crunch 1.1M+ sales lines and 540K orders in sub-second query latency." },
+      { title: "Full-Stack BI Dashboard (React.js + FastAPI)", desc: "Developed a modern, interactive web dashboard in React.js powered by FastAPI REST endpoints, delivering seamless filtering, multi-metric drill-downs, and real-time KPI visualization." },
+      { title: "Multi-Dimensional Retail KPIs", desc: "Implemented comprehensive analytics across sales performance, branch profitability, inventory turnover, procurement tracking, and customer retention metrics." }
+    ],
+    kpis: [
+      { val: "1.1M+", label: "Sales Lines Analyzed" },
+      { val: "540K", label: "Unique Orders" },
+      { val: "3.39M+", label: "Units Sold" },
+      { val: "24 Tables", label: "Relational Model" }
+    ],
+    github: "https://github.com/Mohamed-ME21/cottonail_intelligence",
+    live: "https://lnkd.in/p/eqU-Q7D3"
+  },
+
 
   "nsst-agent-v2": {
     title: "NSST Agentic V2",
